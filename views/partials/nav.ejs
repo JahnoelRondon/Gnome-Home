@@ -4,11 +4,24 @@
 </head>
 <body>
   <nav>
+    <!-- logged in -->
     <% if (user) { %>
+
+      <section>
+        <img src="https://trello.com/1/cards/6169a1a50a3163716c18efa5/attachments/6169a1a50a3163716c18efb0/previews/6169a1a50a3163716c18efba/download/bad-gnome.png" width="60px" height="60px">
+        <a href="/" class="fs-3">Gnome Home</a>
+      </section>
+      
       <a href="/auth/logout">
         <button type="submit">Logout</button>
       </a>
     <% } else { %>
+      <!-- not Logged in -->
+      <section>
+        <img src="https://trello.com/1/cards/6169a1a50a3163716c18efa5/attachments/6169a1a50a3163716c18efb0/previews/6169a1a50a3163716c18efba/download/bad-gnome.png" width="50px" height="50px">
+        <a href="/">Gnome Home</a>
+      </section>
+
       <a href="/auth/google" class="siwg-link">
         <button type="submit" class="siwg">
           <img id="siwg-image" alt="Sign in with Google" />
