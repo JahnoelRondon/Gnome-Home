@@ -5,10 +5,18 @@
 
   <!-- create functionality in here for first time or logged out users, if they dont exist -->
   <% if (!user) { %>
-    <h1>not logged in</h1>
+
+    <section class="welcome">
+      <h2>Welcome to Gnome Home!</h2>
+      <!-- add a fancy image here -->
+      <img src="https://arcaneeye.com/wp-content/uploads/2021/04/wisnu-tan-rage-bellower-uplox.jpg.webp" width="400px" class="cardAnimate">
+
+      <p class="siteDesc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. In esse, sit minima neque maxime voluptates facere debitis odio, voluptas ratione iure. Cumque incidunt fugit asperiores debitis modi cum aperiam vel.lorem and hghfh kuebf gneik bbdje gr yfo jh ohfoh ro ghhi fhi eo foeb jfk eh o  oe hfoeh iheoh ofeifh ieojgpeng ogoeo goe goe eog eg egj eg o ogje o oge.</p>      
+    </section>
+
+
   <% } %>
   
-
 
   <!-- create functionality in here for if the user is logged in to see the interactice pantheon home page -->
   <% if (user) { %>
@@ -23,6 +31,7 @@
     <% } %>   
 
   <h1>hello <%= user.profile.name %></h1>
+
 
   <% } %>
 
