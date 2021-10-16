@@ -63,6 +63,7 @@ main {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  text-align: center;
 }
 
 
@@ -78,7 +79,7 @@ main {
 .googleLink {
   font-size: 18px;
   color: #3EDBF0;
-  padding: 2px;
+  padding: 4px;
   box-shadow: inset 2px 2px 12px currentColor;
   transition: all 0.3s;
 }
@@ -118,3 +119,8 @@ main {
   line-height: 40px;
 }
 
+/* Logged in root */
+.loggedIntro p {
+  padding-top: 20px;
+  font-size: 18px;
+}

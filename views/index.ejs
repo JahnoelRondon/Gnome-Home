@@ -11,13 +11,14 @@
     <img src="https://arcaneeye.com/wp-content/uploads/2021/04/wisnu-tan-rage-bellower-uplox.jpg.webp" class="cardAnimate">
 
     <p class="siteDesc">Gnome home is a place for us fairy tale loving historians. Here you will find and submit mythologies throughout history from different pantheons and cultures. Fill your curiosity by reviewing different folk tales and add your own. Submit your interest's in the folk tale and rate them. <br>Engjoy!</p>      
-    
 
   <% } %>
   
 
   <!-- create functionality in here for if the user is logged in to see the interactice pantheon home page -->
   <% if (user) { %>
+    
+    
     <!-- avatar -->
     <% if (user?.profile.avatar) { %>
       <div>
@@ -28,7 +29,15 @@
       </div>
     <% } %>   
 
-  <h1>hello <%= user.profile.name %></h1>
+    <h1><%= user.profile.name %></h1>
+    
+    <div class="loggedIntro">
+      <p><span>Pantheons</span><br>
+      See the folk tales from the particular set of all polytheistic mythologies. 
+      </p>      
+
+    
+    </div>
 
 
   <% } %>
