@@ -33,6 +33,15 @@ body {
   color: white;
 }
 
+/* --------------------My defaults */
+.link {
+  transition: all 0.3s;
+}
+
+.link:hover {
+  color: #F7EA00;
+}
+
 /* -----------------------------Nav */
 nav {
   background-color: rgb(12, 12, 12);
@@ -43,6 +52,7 @@ nav {
 }
 
 a {
+  color: white;
   text-decoration: none;
 }
 
@@ -94,6 +104,7 @@ main {
   border-bottom: 2px solid currentColor;
 }
 
+
 .welcome h2 {
   font-size: 44px;
   padding: 20px 0;
@@ -121,6 +132,18 @@ main {
 
 /* Logged in root */
 .loggedIntro p {
-  padding-top: 20px;
+  padding: 20px 0;
   font-size: 18px;
+}
+
+.pantheon a {
+  display: block;
+  font-size: 42px;
+  font-weight: bold;
+}
+
+.pantheon img {
+  width: 50%;
+  border-radius: 10px;
+  box-shadow: 2px 2px 16px currentColor;
 }
