@@ -1,18 +1,17 @@
 <%- include('./partials/html-head') %>
 <%- include('./partials/nav') %>
 
-<main>
+<main class="welcome">
 
   <!-- create functionality in here for first time or logged out users, if they dont exist -->
   <% if (!user) { %>
 
-    <section class="welcome">
-      <h2>Welcome to Gnome Home!</h2>
-      <!-- add a fancy image here -->
-      <img src="https://arcaneeye.com/wp-content/uploads/2021/04/wisnu-tan-rage-bellower-uplox.jpg.webp" width="400px" class="cardAnimate">
+    <h2>Welcome to Gnome Home!</h2>
+    <!-- add a fancy image here -->
+    <img src="https://arcaneeye.com/wp-content/uploads/2021/04/wisnu-tan-rage-bellower-uplox.jpg.webp" class="cardAnimate">
 
-      <p class="siteDesc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. In esse, sit minima neque maxime voluptates facere debitis odio, voluptas ratione iure. Cumque incidunt fugit asperiores debitis modi cum aperiam vel.lorem and hghfh kuebf gneik bbdje gr yfo jh ohfoh ro ghhi fhi eo foeb jfk eh o  oe hfoeh iheoh ofeifh ieojgpeng ogoeo goe goe eog eg egj eg o ogje o oge.</p>      
-    </section>
+    <p class="siteDesc">Gnome home is a place for us fairy tale loving historians. Here you will find and submit mythologies throughout history from different pantheons and cultures. Fill your curiosity by reviewing different folk tales and add your own. Submit your interest's in the folk tale and rate them. <br>Engjoy!</p>      
+    
 
   <% } %>
   

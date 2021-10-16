@@ -7,9 +7,9 @@
     <!-- logged in -->
     <% if (user) { %>
 
-      <section>
+      <section class="title">
         <img src="https://trello.com/1/cards/6169a1a50a3163716c18efa5/attachments/6169a1a50a3163716c18efb0/previews/6169a1a50a3163716c18efba/download/bad-gnome.png" width="60px" height="60px">
-        <a href="/" class="fs-3">Gnome Home</a>
+        <a href="/">Gnome Home</a>
       </section>
       
       <a href="/auth/logout">
@@ -17,15 +17,12 @@
       </a>
     <% } else { %>
       <!-- not Logged in -->
-      <section>
+      
+      <section class="title">
         <img src="https://trello.com/1/cards/6169a1a50a3163716c18efa5/attachments/6169a1a50a3163716c18efb0/previews/6169a1a50a3163716c18efba/download/bad-gnome.png" width="60px" height="60px">
-        <a href="/" class="fs-3">Gnome Home</a>
+        <a href="/">Gnome Home</a>
       </section>
 
-      <a href="/auth/google" class="siwg-link">
-        <button type="submit" class="siwg">
-          <img id="siwg-image" alt="Sign in with Google" />
-        </button>
-      </a>
+      <a href="/auth/google" class="googleLink"><span>G</span> Sign in with Google</a>
     <% } %>
   </nav>
