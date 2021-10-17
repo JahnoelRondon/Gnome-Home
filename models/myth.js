@@ -9,7 +9,10 @@ const Myth = new Schema({
     reviews: [{
         type: Schema.Types.ObjectId,
         ref: 'Profile'
-    }]
+    }],
+    
+}, {
+    timestamps: true
 })
 
 export {
