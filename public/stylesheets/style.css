@@ -147,3 +147,12 @@ main {
   border-radius: 10px;
   box-shadow: 2px 2px 16px currentColor;
 }
+
+/* myths render */
+
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}

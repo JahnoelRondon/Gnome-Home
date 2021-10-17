@@ -1,5 +1,5 @@
 import {Router} from "express";
-import * as mythsCtrl from './../controllers/myths.js'
+import * as mythsCtrl from '../controllers/myths.js'
 
 const router = Router();
 
