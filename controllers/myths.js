@@ -1,5 +1,6 @@
 import {Myth} from '../models/myth.js'
 
+
 function index(req, res){
     console.log('index');
     // do a find here 
@@ -9,7 +10,9 @@ function index(req, res){
 }
 
 function newMyth(req, res){
-    
+    Myth.create(req.body, function(err, myth){
+        res.redirect('/myths')
+    })
 }
 
 export {

@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const Schema = mongoose.Schema;
 
-const Myth = new Schema({
+const MythSchema = new Schema({
     name: String,
     img: String,
     bio: String,
@@ -10,10 +10,12 @@ const Myth = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'Profile'
     }],
-    
+
 }, {
     timestamps: true
 })
+
+const Myth = mongoose.model('Myth', MythSchema)
 
 export {
     Myth
