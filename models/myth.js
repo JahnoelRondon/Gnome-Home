@@ -18,6 +18,8 @@ const MythSchema = new Schema({
     timestamps: true
 })
 
+
+
 const Myth = mongoose.model('Myth', MythSchema)
 
 export {
