@@ -17,21 +17,20 @@ function newMyth(req, res){
 
 function createMyth(req, res){
 
-    addToPantheon();
-
     Myth.create(req.body, function(err, myth){
         res.redirect('/')
     })
     
+    // addToPantheon();
 }
 
-function addToPantheon(){
-    Pantheon.find({ pantheon: 'Greek'}, function(err, pantheon){
-        Myth.find({ pantheon : 'Greek'}, function(err, myth){
+// function addToPantheon(){
+//     Pantheon.find({ pantheon: 'Greek'}, function(err, pantheon){
+//         Myth.find({ pantheon : 'Greek'}, function(err, myth){
             
-        })
-    })
-}
+//         })
+//     })
+// }
 
 function createPantheon(req, res){
 
@@ -42,7 +41,7 @@ function createPantheon(req, res){
 
 
 function consoleTest(req, res){
-    
+
     Pantheon.find({pantheon: 'Greek'}, function(err, doc){
         // push onto this 
         console.log(doc[0].myths)
