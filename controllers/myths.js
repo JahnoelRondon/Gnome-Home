@@ -5,13 +5,13 @@ import {Pantheon} from '../models/pantheon.js'
 function index(req, res){
     // do a find here 
     if (req.params.pantheon) {
-        let item = req.params.pantheon;
-        item = item[0].toUpperCase() + item.slice(1);
+        let category = req.params.pantheon;
+        category = category[0].toUpperCase() + category.slice(1);
 
-        Myth.find({pantheon: item})
+        Myth.find({pantheon: category})
         .then(myths => {
             res.render('myths/index', {
-                title: `${item} Myths`,
+                title: `${category} Myths`,
                 myths
             })            
         })

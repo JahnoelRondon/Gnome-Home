@@ -4,7 +4,7 @@ import * as mythdetailCtrl from '../controllers/mythdetail.js'
 const router = Router();
 
 
-router.get('/:name', isLoggedIn, mythdetailCtrl.show)
+router.get('/:id', isLoggedIn, mythdetailCtrl.show)
 
 function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) return next();
