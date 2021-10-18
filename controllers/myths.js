@@ -26,7 +26,11 @@ function createMyth(req, res){
 }
 
 function addToPantheon(){
-    
+    Pantheon.find({ pantheon: 'Greek'}, function(err, pantheon){
+        Myth.find({ pantheon : 'Greek'}, function(err, myth){
+            
+        })
+    })
 }
 
 function createPantheon(req, res){
@@ -38,20 +42,7 @@ function createPantheon(req, res){
 
 
 function consoleTest(req, res){
-    // Testing 1
-    // Myth.find({pantheon: 'Greek'}, function(err, mythType){
-    //     // must check if mythType document does not already exist in pantheon model array before pushing 
-    //     // look at each doc and see if does not already exist in pantheon array
-    //     console.log(mythType)
-    //     mythType.forEach(function(type){
-    //         console.log(type.name); 
-    //     })
-    // })
-
-    // Greek.find({}, function(err, docs){
-    //     console.log(`Docs ${docs}`)
-
-    // })
+    
     Pantheon.find({pantheon: 'Greek'}, function(err, doc){
         // push onto this 
         console.log(doc[0].myths)
