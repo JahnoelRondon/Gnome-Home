@@ -38,21 +38,17 @@
       See the folk tales from the particular set of all polytheistic mythologies. 
       </p>      
 
-      <div class="pantheon">
-        <!-- use for each loop dynamically  -->
-        <a href="/myths" class="link">Greek</a>
-        <img src="https://www.ancient-origins.net/sites/default/files/field/image/Prometheus-giving-man-fire-Greek-mythology.jpg">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde error reprehenderit recusandae harum voluptate, facilis libero obcaecati blanditiis, ipsum aliquam nesciunt consequuntur placeat laborum! Similique provident obcaecati hic voluptate? Fuga.</p>
-      </div>
+        <% pantheons.forEach(function(pantheon){ %>
+        <div class="pantheon">
+          <!-- make the href dynamic as well? -->
+          <a href="/myths" class="link"><%= pantheon.pantheon %></a>
+          <img src="<%= pantheon.img %> ">
+          <p><%= pantheon.desc %> </p>
+        </div>
 
-      <div class="pantheon">
-        <a href="" class="link">Greek</a>
-        <img src="https://www.ancient-origins.net/sites/default/files/field/image/Prometheus-giving-man-fire-Greek-mythology.jpg">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde error reprehenderit recusandae harum voluptate, facilis libero obcaecati blanditiis, ipsum aliquam nesciunt consequuntur placeat laborum! Similique provident obcaecati hic voluptate? Fuga.</p>
-      </div>
+        <% }) %> 
 
     </div>
-
 
   <% } %>
 

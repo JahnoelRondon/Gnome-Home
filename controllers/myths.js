@@ -17,10 +17,15 @@ function newMyth(req, res){
 
 function createMyth(req, res){
 
-    
+    addToPantheon();
+
     Myth.create(req.body, function(err, myth){
         res.redirect('/')
     })
+    
+}
+
+function addToPantheon(){
     
 }
 

@@ -1,11 +1,20 @@
 import { Router } from 'express'
+import { Pantheon } from './../models/pantheon.js'
+
+const router = Router()
+
+router.get('/', function (req, res) {
+  Pantheon.find({}, function(err, pantheons){
+    console.log(pantheons)
+    res.render('index', { 
+        title: 'Gnome Home', 
+        user: req.user ? req.user : null,
+        pantheons
+      })
+  })
+  
+})
 
 export {
   router
 }
-
-const router = Router()
-router.get('/', function (req, res) {
-  res.render('index', { title: 'Gnome Home', user: req.user ? req.user : null })
-})
-
