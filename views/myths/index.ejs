@@ -1,16 +1,20 @@
 <%- include('./../partials/html-head') %>
 <%- include('./../partials/nav') %>
 
-<main class="welcome">
+<main class="category">
 
     <h1><%= title %> </h1>
 
+    <section class="cardContainer">
     <% myths.forEach(myth => { %>
-        <h4><%= myth.name %> </h4>
-        <img src="<%= myth.img %> " width="500px">
-        <p><%= myth.bio %></p>
-        <br>
+        <div class="mythCard1">
+            <a href="/myths/<%= myth._id %> "><%= myth.name %></a>
+            <img src="<%= myth.img %>">
+            <br>            
+        </div>
+
     <% }) %>
+    </section>
 
 </main>
 

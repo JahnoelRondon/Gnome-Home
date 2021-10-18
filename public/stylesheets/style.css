@@ -148,7 +148,7 @@ main {
   box-shadow: 2px 2px 16px currentColor;
 }
 
-/* myths render */
+/* New myths render */
 
 form {
   display: flex;
@@ -156,3 +156,41 @@ form {
   flex-direction: column;
   align-items: center;
 }
+
+/* Pantheon category render */
+.category {
+  text-align: center;
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.mythCard1 {
+  margin: 10px;
+  width: 30%;
+}
+
+.mythCard1 a {
+  display: block;
+  font-size: 18px;
+}
+
+.mythCard1 img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 1px 1px 12px rgb(194, 194, 194);
+  transition: all 0.5s;
+}
+
+.mythCard1 img:hover {
+  box-shadow: 1px 2px 18px rgb(255, 255, 255);
+  transform: skewY(2deg);
+}
+/* Myth detail */
+

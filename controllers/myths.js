@@ -4,7 +4,23 @@ import {Pantheon} from '../models/pantheon.js'
 
 function index(req, res){
     // do a find here 
-    Myth.find({})
+    if (req.params.pantheon) {
+        let item = req.params.pantheon;
+        item = item[0].toUpperCase() + item.slice(1);
+
+        Myth.find({pantheon: item})
+        .then(myths => {
+            res.render('myths/index', {
+                title: `${item} Myths`,
+                myths
+            })            
+        })
+        .catch(err => {
+            console.log(err)
+        }) 
+
+    } else {
+       Myth.find({})
         .then(myths => {
             res.render('myths/index', {
                 title: 'Myths',
@@ -13,8 +29,8 @@ function index(req, res){
         })
         .catch(err => {
             console.log(err)
-        })
-
+        }) 
+    }
 
 }
 
@@ -38,19 +54,10 @@ function createPantheon(req, res){
     })
 }
 
-function consoleTest(req, res){
-
-    Pantheon.find({pantheon: 'Greek'}, function(err, doc){
-        // push onto this 
-        console.log(doc[0].myths)
-    })
-    res.redirect('/myths/new')
-}
-
 export {
     index,
     createMyth,
     newMyth as new,
-    createPantheon,
-    consoleTest
+    createPantheon
 }
+

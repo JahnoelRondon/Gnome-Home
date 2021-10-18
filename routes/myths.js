@@ -6,8 +6,8 @@ const router = Router();
 router.get('/',isLoggedIn,  mythsCtrl.index)
 router.get('/new', isLoggedIn, mythsCtrl.new)
 
-// get rid of 
-router.get('/test', isLoggedIn, mythsCtrl.consoleTest)
+router.get('/:pantheon', isLoggedIn, mythsCtrl.index)
+
 
 router.post('/', isLoggedIn, mythsCtrl.createMyth)
 router.post('/pantheon', isLoggedIn, mythsCtrl.createPantheon)

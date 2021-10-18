@@ -40,15 +40,15 @@
         <% pantheons.forEach(function(pantheon){ %>
         <div class="pantheon">
           <!-- make the href dynamic as well? -->
-          <a href="/myths" class="link"><%= pantheon.pantheon %></a>
+          <a href="/myths/<%= pantheon.pantheon.toLowerCase() %> " class="link"><%= pantheon.pantheon %></a>
           <img src="<%= pantheon.img %> ">
           <p><%= pantheon.desc %> </p>
         </div>
 
         <% }) %> 
-
+        
     </div>
-
+    <a href="/myths">View All</a>
   <% } %>
 
 </main>
