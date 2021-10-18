@@ -3,9 +3,12 @@ import * as mythsCtrl from '../controllers/myths.js'
 
 const router = Router();
 
+// renders all myths
 router.get('/',isLoggedIn,  mythsCtrl.index)
+
 router.get('/new', isLoggedIn, mythsCtrl.new)
 
+// renders myth based on param.pantheon
 router.get('/:pantheon', isLoggedIn, mythsCtrl.index)
 
 
