@@ -5,7 +5,12 @@
 
     <h1><%= title %> </h1>
 
-    
+    <% myths.forEach(myth => { %>
+        <h4><%= myth.name %> </h4>
+        <img src="<%= myth.img %> " width="500px">
+        <p><%= myth.bio %></p>
+        <br>
+    <% }) %>
 
 </main>
 
