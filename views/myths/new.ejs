@@ -1,0 +1,52 @@
+<%- include('./../partials/html-head') %>
+<%- include('./../partials/nav') %>
+
+<main class="welcome">
+
+    <!-- Delete -->
+    <form action="/myths/test" method="GET">
+        <button type="submit">test</button>
+    </form>
+
+    <h1><%= title %> </h1>
+
+    <form action="/myths" method="POST">
+        
+        <label for="">Pantheon</label>
+        <select name='pantheon'>
+            <option value="Greek">Greek</option>
+            <option value="Egyptian">Egyptian</option>
+            <option value="Japanese">Japanese</option>
+        </select>
+
+        <label for="">Name</label>
+        <input type="text" name="name">
+
+        <label for="">Image Url</label>
+        <input type="text" name="img">
+        
+        <label for="">Description</label>
+        <textarea rows="4" cols="50" name="bio"></textarea>
+
+        <button type="submit">Create</button>
+
+    </form>
+
+    <!-- Pantheon -->
+    <form action="/myths/pantheon" method="POST">
+        <label for="">Pantheon Name</label>
+        <input type="text" name="pantheon">
+
+        <label for="">URL image</label>
+        <input type="text" name="img">
+
+        <label for="">Bio</label>
+        <input type="text" name="desc">
+        <button type="submit">create</button>
+    </form>
+
+    
+
+</main>
+
+<%- include('./../partials/footer') %>
