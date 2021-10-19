@@ -35,7 +35,7 @@ body {
 
 /* --------------------My defaults */
 .link {
-  transition: all 0.3s;
+  transition: all 0.4s;
 }
 
 .link:hover {
@@ -44,7 +44,7 @@ body {
 
 /* -----------------------------Nav */
 nav {
-  background-color: rgb(12, 12, 12);
+  background-color: rgb(20, 20, 20);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -56,6 +56,10 @@ a {
   text-decoration: none;
 }
 
+.gnomeTitle {
+  font-size: 24px;
+}
+
 .title {
   display: flex;
   align-items: center;
@@ -63,8 +67,26 @@ a {
 
 .title a{
   color: white;
-  font-size: 24px;
   margin-left: 10px;
+}
+
+.googleLink {
+  font-size: 24px;
+  color: #3EDBF0;
+  padding: 4px;
+  box-shadow: inset 2px 2px 12px currentColor;
+  margin: 0px 10px;
+  transition: all 0.3s;
+}
+
+.googleLink span {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.googleLink:hover {
+  box-shadow: inset 0px 0px 0px currentColor;
+  border-bottom: 2px solid currentColor;
 }
 
 /*--------------------- Root Page */
@@ -86,32 +108,13 @@ main {
   margin: 0 auto;
 }
 
-.googleLink {
-  font-size: 18px;
-  color: #3EDBF0;
-  padding: 4px;
-  box-shadow: inset 2px 2px 12px currentColor;
-  transition: all 0.3s;
-}
-
-.googleLink span {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.googleLink:hover {
-  box-shadow: inset 0px 0px 0px currentColor;
-  border-bottom: 2px solid currentColor;
-}
-
-
 .welcome h2 {
-  font-size: 44px;
+  font-size: 4vw;
   padding: 20px 0;
 }
 
 .cardAnimate {
-  width: 50%;
+  width: 65%;
   border-radius: 10px;
   box-shadow: 2px 2px 18px rgb(121, 121, 121);
   transition: all 0.5s;
@@ -123,29 +126,45 @@ main {
 
 .siteDesc {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 24px;
-  padding: 20px 20px;
-  max-width: 700px;
-  color: rgba(255, 255, 255, 0.5);
-  line-height: 40px;
+  font-size: 2.5vh;
+  padding: 20px 10px;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 2px;
 }
 
 /* Logged in root */
+.loggedIntro span {
+  font-size: 2.5vh;
+}
+
 .loggedIntro p {
   padding: 20px 0;
-  font-size: 18px;
+  font-size: 1.5vh;
+  letter-spacing: 1.5px;
+}
+
+.loggedIntro .uiTakeStyle {
+  text-decoration: underline;
+  font-size: 2vh;
+  padding: 10px;
 }
 
 .pantheon a {
-  display: block;
-  font-size: 4vw;
-  font-weight: bold;
+  display: inline-block;
+  width: 40%;
+  font-size: 5vw;
+  margin: 20px 0;
 }
 
 .pantheon img {
-  width: 50%;
+  width: 70%;
   border-radius: 10px;
   box-shadow: 2px 2px 16px currentColor;
+}
+
+.pantheon p {
+  font-size: 2vh;
+  letter-spacing: 1.5px;
 }
 
 /* New myths render */
@@ -155,6 +174,45 @@ form {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  margin: 20px 0;
+  width: 70%;
+}
+
+form select{
+  padding: 4px;
+  font-size: 2.5vh;
+}
+
+form select:hover{
+  cursor: pointer;
+}
+
+form label {
+  font-size: 4vh;
+  padding: 10px;
+}
+
+form input {
+  width: 60%;
+  padding: 4px;
+}
+
+form textarea {
+  width: 90%;
+}
+
+form button {
+  padding: 10px;
+  font-size: 2vh;
+  margin-top: 10px;
+  font-weight: bold;
+  transition: all 0.4s;
+}
+
+form button:hover {
+  color: white;
+  background-color: black;
+  cursor: pointer;
 }
 
 /* Pantheon category render */
@@ -176,9 +234,9 @@ form {
   width: 30%;
 }
 
-.mythCard1 a {
+.mythCard1 .cardTitle {
   display: block;
-  font-size: 18px;
+  font-size: 3.6vh;
 }
 
 .mythCard1 img {
@@ -207,6 +265,7 @@ form {
   margin-top: 20px;
   font-size: 5vw;
   letter-spacing: 4px;
+  padding: 6px;
 }
 
 .mythContainer img {

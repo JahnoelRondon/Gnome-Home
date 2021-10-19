@@ -2,12 +2,6 @@
 <%- include('./../partials/nav') %>
 
 <main class="welcome">
-
-    <!-- Delete -->
-    <form action="/myths/test" method="GET">
-        <button type="submit">test</button>
-    </form>
-
     <h1><%= title %> </h1>
 
     <form action="/myths" method="POST">
@@ -28,12 +22,12 @@
         <label for="">Description</label>
         <textarea rows="4" cols="50" name="bio"></textarea>
 
-        <button type="submit">Create</button>
+        <button type="submit">Create Myth</button>
 
     </form>
 
     <!-- Pantheon -->
-    <form action="/myths/pantheon" method="POST">
+    <!-- <form action="/myths/pantheon" method="POST">
         <label for="">Pantheon Name</label>
         <input type="text" name="pantheon">
 
@@ -43,7 +37,7 @@
         <label for="">Bio</label>
         <textarea name="desc" id="" cols="30" rows="10"></textarea>
         <button type="submit">create</button>
-    </form>
+    </form> -->
 
     
 

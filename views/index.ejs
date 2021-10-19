@@ -30,12 +30,13 @@
 
     <h1><%= user.profile.name %></h1>
 
-    <a href="/myths/new">Create a Myth</a>
-    
     <div class="loggedIntro">
       <p><span>Pantheon Tales</span><br>
       See the folk tales from the particular set of all polytheistic mythologies. 
-      </p>      
+      </p>  
+
+      <a href="/myths/new" class="uiTakeStyle link">Create a Myth here</a>
+      <a href="/myths" class="uiTakeStyle link">View All Here</a>
 
         <% pantheons.forEach(function(pantheon){ %>
         <div class="pantheon">
@@ -48,7 +49,6 @@
         <% }) %> 
         
     </div>
-    <a href="/myths">View All</a>
   <% } %>
 
 </main>

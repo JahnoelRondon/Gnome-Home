@@ -8,7 +8,7 @@
     <section class="cardContainer">
     <% myths.forEach(myth => { %>
         <div class="mythCard1">
-            <a href="/mythdetail/<%= myth._id %>"><%= myth.name %></a>
+            <a href="/mythdetail/<%= myth._id %>" class="cardTitle"><%= myth.name %></a>
             <a href="/mythdetail/<%= myth._id %>"><img src="<%= myth.img %>"></a>
             <br>            
         </div>
