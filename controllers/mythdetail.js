@@ -1,4 +1,6 @@
-import { Myth } from './../models/myth.js'
+import { Myth } from './../models/myth.js';
+import {MythReview} from './../models/mythreview.js';
+
 
 function show(req, res){
     Myth.findById(req.params.id)

@@ -1,14 +1,21 @@
 import mongoose from 'mongoose'
 
-export {
-  Profile
-}
+const Schema = mongoose.Schema
 
-const profileSchema = new mongoose.Schema({
+const profileSchema = new Schema({
   name: String,
   avatar: String,
+  reviews: [{
+    type: Schema.Types.ObjectId,
+    ref: 'MythReview'
+}]
 }, {
   timestamps: true
 })
 
 const Profile = mongoose.model('Profile', profileSchema)
+
+
+export {
+  Profile
+}

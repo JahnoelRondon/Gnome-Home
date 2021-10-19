@@ -169,7 +169,7 @@ main {
 
 /* New myths render */
 
-form {
+.mythForm form {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -178,30 +178,30 @@ form {
   width: 70%;
 }
 
-form select{
+.mythForm form select{
   padding: 4px;
   font-size: 2.5vh;
 }
 
-form select:hover{
+.mythForm form select:hover{
   cursor: pointer;
 }
 
-form label {
+.mythForm form label {
   font-size: 4vh;
   padding: 10px;
 }
 
-form input {
+.mythForm form input {
   width: 60%;
   padding: 4px;
 }
 
-form textarea {
+.mythForm form textarea {
   width: 90%;
 }
 
-form button {
+.mythForm form button {
   padding: 10px;
   font-size: 2vh;
   margin-top: 10px;
@@ -209,7 +209,7 @@ form button {
   transition: all 0.4s;
 }
 
-form button:hover {
+.mythForm form button:hover {
   color: white;
   background-color: black;
   cursor: pointer;
@@ -282,4 +282,51 @@ form button:hover {
   letter-spacing: 2px;
   line-height: 24px;
   color: rgba(255, 255, 255, 0.7);
+}
+
+.infoReview {
+  width: 100%;
+}
+
+.infoReview form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.infoReview form label {
+  font-size: 3vh;
+  padding: 4px;
+}
+
+.infoReview form textarea {
+  width: 50%;
+}
+
+.infoReview form select {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 30px;
+  font-size: 2vh;
+  font-weight: bold;
+}
+
+.infoReview form select:hover {
+  cursor: pointer;
+}
+
+.infoReview form button {
+  padding: 10px;
+  font-size: 2vh;
+  margin-top: 10px;
+  font-weight: bold;
+  transition: all 0.4s;
+}
+
+.infoReview form button:hover {
+  color: white;
+  background-color: black;
+  cursor: pointer;
 }

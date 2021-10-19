@@ -12,7 +12,7 @@ const MythSchema = new Schema({
     },
     reviews: [{
         type: Schema.Types.ObjectId,
-        ref: 'Profile'
+        ref: 'MythReview'
     }]
 }, {
     timestamps: true
