@@ -11,7 +11,6 @@
         <p><%= myth.bio %></p>        
     </div>
 
-
 </main>
 
 <section class="infoReview">
@@ -32,14 +31,21 @@
         </form>
     </div>
 
-
-    <div>
-        <!-- show reviews -->
-
-    </div>    
+    <% if (myth.reviews.length > 0) { %>
+        <div class="existingReviews">
+            <!-- show reviews -->
+            <% myth.reviews.forEach(review => { %>
+                <div class="review">
+                    <p><%= review.content %> </p>
+                    <p>Rating: <%= review.rating %>/5 </p>
+                    <p><%= review.author.name %> </p>  
+                </div>
+            <% }) %>
+        </div>        
+    <% } else {%>
+        <h2>Be the first reviewer!</h2>
+    <% } %> 
 
 </section>
-
-
 
 <%- include('./../partials/footer') %>
