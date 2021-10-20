@@ -1,5 +1,7 @@
 import { Myth } from './../models/myth.js';
 import {MythReview} from './../models/mythreview.js';
+import {Profile} from "./../models/profile.js"
+
 
 function show(req, res){
     Myth.findById(req.params.id)
@@ -31,13 +33,21 @@ function create(req, res){
         .then(myth => {
 //review(s) on the mythmodel   //review that was just created
             myth.reviews.push(review._id)
-            myth.save()
+            myth.save() // now push the review to the user
+            .then(() => {
+                Profile.findById(req.user.profile._id)
+                .then(profile => {
+                    profile.reviews.push(review._id)
+                    profile.save()
+                })
+            })
             .then(() => {
                 res.redirect(`/mythdetail/${req.params.id}`)    
             })
         })
         
     })
+
 }
 
 export {

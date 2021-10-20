@@ -3,7 +3,7 @@ import * as profileCtrl from '../controllers/profile.js'
 
 const router = Router();
 
-router.get('/', profileCtrl.index)
+router.get('/:profileId', profileCtrl.index)
 
 export {
     router
