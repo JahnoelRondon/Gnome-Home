@@ -12,14 +12,13 @@
     </div>
 
 
-
 </main>
 
 <section class="infoReview">
 
     <div>
         <!-- review form -->
-        <form>
+        <form action="/mythdetail/<%= myth._id %>/review" method="POST">
             <label>Make a Review</label>
             <textarea rows="5" cols="50px" name="content"></textarea>
             <select name="rating" id="">
