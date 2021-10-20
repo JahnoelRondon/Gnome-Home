@@ -6,7 +6,7 @@ const router = Router();
 
 router.get('/:id', isLoggedIn, mythdetailCtrl.show)
 
-router.post('/:id/review', isLoggedIn, mythdetailCtrl.create)
+router.post('/:id', isLoggedIn, mythdetailCtrl.create)
 
 function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) return next();
