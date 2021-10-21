@@ -3,10 +3,6 @@
 
 <main class="welcome">
   
-  <!-- admin functionality -->
-  <% if (user?.profile._id == "616f1fd1e6f18ac8f8506367") { %>
-   <h1>Admin Control</h1>
-  <% } %>
   <!-- create functionality in here for first time or logged out users, if they dont exist -->
   <% if (!user) { %>
 
@@ -21,20 +17,6 @@
   <!-- create functionality in here for if the user is logged in to see the interactice pantheon home page -->
   <% if (user) { %>
     
-    
-    <!-- avatar -->
-    <% if (user?.profile.avatar) { %>
-      <div>
-        <img 
-          src="<%= user.profile.avatar %>" 
-          alt="<%= user.profile.name %> avatar"
-          class="pageTitle"
-        >
-      </div>
-    <% } %>   
-
-    <h1><%= user.profile.name %></h1>
-
     <div class="loggedIntro">
       <p><span>Pantheon Tales</span><br>
       See the folk tales from the particular set of all polytheistic mythologies. 
