@@ -107,7 +107,7 @@ main {
 .pageTitle {
   padding: 20px 10px;
 }
-/* ------not logged in */
+/* -------------------------------not logged in */
 .welcome {
   display: flex;
   flex-direction: column;
@@ -140,7 +140,7 @@ main {
   letter-spacing: 2px;
 }
 
-/* Logged in root */
+/* ----------------------------Logged in root */
 .loggedIntro span {
   font-size: 2.5vh;
 }
@@ -176,7 +176,7 @@ main {
   padding: 10px 10px 0px 10px;
 }
 
-/* Profile page */
+/* ---------------------------------Profile page */
 .spacing {
   margin: 20px 0;
 }
@@ -236,7 +236,7 @@ main {
   cursor: pointer;
 }
 
-/* New myths render */
+/* ----------------------------------New myths render */
 
 .mythForm form {
   display: flex;
@@ -284,7 +284,7 @@ main {
   cursor: pointer;
 }
 
-/* Pantheon category render */
+/* -------------------------Pantheon category render */
 .category {
   text-align: center;
 }
@@ -321,7 +321,7 @@ main {
 }
 
 
-/* Myth detail/show */
+/* --------------------------------Myth detail/show */
 .infoContainer {
   display: flex;
   width: 90%;
@@ -400,7 +400,7 @@ main {
   cursor: pointer;
 }
 
-/* Existing reviews */
+/* ----------------------------- show view Existing reviews */
 .reviewTitle {
   margin-top: 30px;
   text-align: center;
