@@ -3,7 +3,7 @@
 
 <main class="infoContainer">
 
-    <h1><%= title %> </h1>
+    <h1 class="pageTitle"><%= title %> </h1>
 
     <div class="mythContainer">
         <h1><%= myth.name %> </h1>
@@ -36,7 +36,7 @@
         <div class="existingReviews">
             <!-- show reviews -->
             <% myth.reviews.forEach(review => { %>
-                <div class="review">
+                <div class="review reviewdiv">
                     <img src="<%= review.author.avatar %>">
                     <h2><%= review.author.name %> </h2> 
                     <h4>Rating: <%= review.rating %>/5</h4>
@@ -45,7 +45,7 @@
             <% }) %>
         </div>        
     <% } else {%>
-        <h2>Be the first reviewer!</h2>
+        <h2 class="noReviews">Be the first reviewer!</h2>
     <% } %> 
 
 </section>

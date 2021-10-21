@@ -24,6 +24,7 @@ import { router as authRouter } from './routes/auth.js'
 import { router as mythsRouter } from './routes/myths.js'
 import { router as profileRouter } from './routes/profile.js'
 import { router as mythdetailRouter } from './routes/mythdetail.js'
+import { router as reviewsRouter } from './routes/reviews.js'
 
 // view engine setup
 app.set(
@@ -68,6 +69,7 @@ app.use('/auth', authRouter)
 app.use('/myths', mythsRouter)
 app.use('/profile', profileRouter)
 app.use('/mythdetail', mythdetailRouter)
+app.use('/reviews', reviewsRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

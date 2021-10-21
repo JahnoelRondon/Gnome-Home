@@ -28,6 +28,7 @@
         <img 
           src="<%= user.profile.avatar %>" 
           alt="<%= user.profile.name %> avatar"
+          class="pageTitle"
         >
       </div>
     <% } %>   
@@ -39,7 +40,10 @@
       See the folk tales from the particular set of all polytheistic mythologies. 
       </p>  
 
-      <a href="/myths/new" class="uiTakeStyle link">Create a Myth here</a>
+      <% if (user?.profile._id == "616f1fd1e6f18ac8f8506367") { %>
+        <a href="/myths/new" class="uiTakeStyle link">Create a Myth here</a>  
+      <% } %>
+      
       <a href="/myths" class="uiTakeStyle link">View All Here</a>
 
         <% pantheons.forEach(function(pantheon){ %>

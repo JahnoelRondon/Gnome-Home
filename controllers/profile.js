@@ -1,5 +1,4 @@
 import {Profile} from './../models/profile.js';
-import { Myth } from './../models/myth.js';
 import {MythReview} from './../models/mythreview.js';
 
 function index(req, res){
@@ -39,9 +38,6 @@ function deleteReview(req, res){
     })
     
 }
-
-
-
 export {
     index,
     deleteReview as delete
