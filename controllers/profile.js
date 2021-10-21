@@ -24,27 +24,19 @@ function deleteReview(req, res){
     console.log(req.params)
     console.log(req.user.profile._id)
 
-    // // delete the review from the collection
-    // MythReview.findByIdAndDelete(req.params.reviewId)
-    // .then(() => {
-    //     // delete the review from the profile array
-    //     Profile.findById(req.user.profile._id)
-    //     .then(profile => {
-    //         profile.reviews.remove({_id: req.params.reviewId})
-    //         profile.save()
-    //     })
-    // })
-    // .then(() => {
-    //     // then delete the review from the myth array and redirect to profile
-    //     Myth.findById(req.params.reviewId.myth._id)
-    //     .then(myth => {
-    //         myth.reviews.remove({_id: req.params.reviewId})
-    //         myth.save()
-    //     })
-    // })
-    // .then(() => {
-    //     res.redirect(`/profile/${req.user.profile._id}`)
-    // })
+    // delete the review from the collection
+    MythReview.findByIdAndDelete(req.params.reviewId)
+    .then(() => {
+        // delete the review from the profile array
+        Profile.findById(req.user.profile._id)
+        .then(profile => {
+            profile.reviews.remove({_id: req.params.reviewId})
+            profile.save()
+        })
+    })
+    .then(() => {
+        res.redirect(`/profile/${req.user.profile._id}`)
+    })
     
 }
 
