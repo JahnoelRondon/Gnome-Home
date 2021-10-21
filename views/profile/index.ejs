@@ -1,16 +1,32 @@
 <%- include('./../partials/html-head') %>
 <%- include('./../partials/nav') %>
 
-<main class="welcome">
+<main class="">
 
-    <h1><%= title %> </h1>
+    <h1 class="spacing"><%= title %> </h1>
+    <img src="<%= profile.avatar %>">
 
-    <h2>Your Reviews</h2>
-    <% profile.reviews.forEach(review => { %>
-        <p><%= review.myth.name %> </p>
-        <p><%= review.rating %> </p>
-        <p><%= review.content %> </p>
-    <% }) %>
+    <% if (profile.reviews.length > 0) { %>
+
+        <h2 class="spacing">Your Reviews <br><span>reviewer score: <%= profile.reviews.length %></span></h2>
+
+        <div class="profileReviews">
+        <% profile.reviews.forEach(review => { %>
+            <div class="reviewMade">
+                <h3>Myth: <%= review.myth.name %></h3>
+                <img src="<%= review.myth.img %>">
+                <p><%= review.rating %>/5</p>
+                <p>"<%= review.content %>"</p>
+                <form action="/profile/<%= review._id %>?_method=DELETE" method="POST">
+                    <button type="submit">Delete <%= review.myth.name %> review </button>
+                </form>
+            </div>
+        <% }) %>     
+        </div>
+    <% } else {%>
+        <h2>No Reviews Made yet <br><span>score: <%= profile.reviews.length %></span></h2>
+    <% } %> 
+
 
 </main>
 

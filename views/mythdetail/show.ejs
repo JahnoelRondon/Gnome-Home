@@ -19,26 +19,28 @@
         <!-- review form -->
         <form action="/mythdetail/<%= myth._id %>" method="POST">
             <label>Make a Review</label>
-            <textarea rows="5" cols="50px" name="content"></textarea>
+            <textarea rows="5" cols="50px" name="content" required></textarea>
             <select name="rating" id="">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
+                <option value="1">1/5</option>
+                <option value="2">2/5</option>
+                <option value="3">3/5</option>
+                <option value="4">4/5</option>
+                <option value="5">5/5</option>
             </select>
             <button type="submit">Submit</button>
         </form>
     </div>
 
     <% if (myth.reviews.length > 0) { %>
+        <h1 class="reviewTitle">Reviews</h1>
         <div class="existingReviews">
             <!-- show reviews -->
             <% myth.reviews.forEach(review => { %>
                 <div class="review">
-                    <p><%= review.content %> </p>
-                    <p>Rating: <%= review.rating %>/5 </p>
-                    <p><%= review.author.name %> </p>  
+                    <img src="<%= review.author.avatar %>">
+                    <h2><%= review.author.name %> </h2> 
+                    <h4>Rating: <%= review.rating %>/5</h4>
+                    <p>"<%= review.content %>"</p>
                 </div>
             <% }) %>
         </div>        

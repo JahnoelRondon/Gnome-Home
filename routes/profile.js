@@ -5,6 +5,8 @@ const router = Router();
 
 router.get('/:profileId', profileCtrl.index)
 
+router.delete('/:reviewId', profileCtrl.delete)
+
 export {
     router
 }

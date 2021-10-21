@@ -167,6 +167,47 @@ main {
   letter-spacing: 1.5px;
 }
 
+/* Profile page */
+.spacing {
+  margin: 20px 0;
+}
+
+.profileReviews {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.profileReviews .reviewMade {
+  background-color: rgb(19, 23, 37);
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  width: 30%;
+  
+}
+
+.profileReviews .reviewMade h3 {
+  font-size: 2.6vh;
+}
+
+.profileReviews .reviewMade img{
+  background-size: cover;
+  background-position: center;
+  width: 80%;
+  border-radius: 20%;
+  border: solid black 4px;
+}
+
+.profileReviews .reviewMade p {
+  font-size: 1.6vw;
+  color: rgba(221, 221, 221, 0.644);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 /* New myths render */
 
 .mythForm form {
@@ -329,4 +370,47 @@ main {
   color: white;
   background-color: black;
   cursor: pointer;
+}
+
+/* Existing reviews */
+.reviewTitle {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 4vw;
+}
+
+.existingReviews {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 90%;
+  margin: 0 auto;  
+}
+
+.existingReviews .review {
+  background-color: rgb(19, 23, 37);
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  width: 30%;
+}
+
+.existingReviews .review img {
+  float: left;
+  border-radius: 50%;
+}
+
+.existingReviews .review h2 {
+  font-size: 3vh;
+}
+
+.existingReviews .review h4 {
+  font-size: 1.5vh;
+}
+
+.existingReviews .review p {
+  font-size: 1.8vw;
+  color: rgba(221, 221, 221, 0.644);
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
