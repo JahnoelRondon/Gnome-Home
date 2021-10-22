@@ -11,7 +11,7 @@ Link: https://gnomehome.herokuapp.com/
 
 Planning: https://trello.com/b/xq0wmqnC/sei-proj-2
 
-## Made with
+## Technologies
 This project was made using HTML / EJS templates, CSS, Javascript
 Google oAuth, Node.js, Express, Mongoose. 
 
