@@ -5,6 +5,8 @@ Gnome home is a place for us folk tale loving historians. Here you will find myt
 
 ![Imgur](https://i.imgur.com/O9SD9RJ.png)
 
+## Links
+
 Link: https://gnomehome.herokuapp.com/
 
 Planning: https://trello.com/b/xq0wmqnC/sei-proj-2
