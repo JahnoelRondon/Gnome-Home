@@ -10,7 +10,7 @@ Planning: https://trello.com/b/xq0wmqnC/sei-proj-2
 
 ## Made with
 This project was made using HTML / EJS templates, CSS, Javascript
-Node.js, Express, Mongoose. 
+Google oAuth, Node.js, Express, Mongoose. 
 
 ![Imgur](https://i.imgur.com/YO8nJVA.png)
 
