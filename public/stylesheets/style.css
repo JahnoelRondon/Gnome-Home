@@ -157,7 +157,7 @@ main {
   padding: 10px;
 }
 
-.pantheon a {
+.pantheon .pantheonLink {
   display: inline-block;
   width: 40%;
   font-size: 5vw;
@@ -168,6 +168,11 @@ main {
   width: 70%;
   border-radius: 10px;
   box-shadow: 2px 2px 16px currentColor;
+  transition: all 0.3s;
+}
+
+.pantheon img:hover {
+  box-shadow: 2px 2px 22px yellow;
 }
 
 .pantheon p {

@@ -31,8 +31,9 @@
         <% pantheons.forEach(function(pantheon){ %>
         <div class="pantheon">
           
-          <a href="/myths/<%= pantheon.pantheon.toLowerCase() %> " class="link"><%= pantheon.pantheon %></a>
-          <img src="<%= pantheon.img %> ">
+          <a href="/myths/<%= pantheon.pantheon.toLowerCase() %> " class="link pantheonLink"><%= pantheon.pantheon %></a>
+          <a href="/myths/<%= pantheon.pantheon.toLowerCase() %> "><img src="<%= pantheon.img %> "></a>
+          <!-- <img src="<%= pantheon.img %> "> -->
           <p><%= pantheon.desc %> </p>
         </div>
 
